@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title> contact </title>
+    <style type = "text/css">
+        .sidebar {
+                  height: 80%;
+                  width: 5;
+                  position: fixed;
+                  z-index: 1;
+                  top: 0;
+                  left: 0;
+                  background-color: #111;
+                  overflow-x: hidden;
+                  transition: 0.5s;
+                  padding-top: 60px;
+        }
+
+        .sidebar a {
+                  padding: 8px 8px 8px 32px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  color: #818181;
+                  display: block;
+                  transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+                  color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+                  position: left;
+                  top: 0;
+                  right: 25px;
+                  font-size: 36px;
+                  margin-left: 100px;
+        }
+
+        .openbtn {
+                  font-size: 20px;
+                  cursor: pointer;
+                  background-color: #111;
+                  color: white;
+                  padding: 10px 15px;
+                  border: none;
+                  position: absolute;
+                  left: 1100px;
+                  top: 46px;
+        }
+
+        .openbtn:hover {
+                        background-color: #444;
+        }
+
+        #main {
+                transition: margin-left 1.5s;
+                padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+          .sidebar {padding-top: 15px;}
+          .sidebar a {font-size: 18px;}
+        }
+        h1 {
+            padding-left : 30px;
+            text-align : center-left;
+            font-family : times new roman;
+            background : linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+            width: 100px
+            height: 200px
+        }
+        body {
+            background: linear-gradient(to right, #33ccff 20%, #0000ff 100%);
+            height:200px
+        }
+        p {
+            font-family : Arial;
+            margin-left : 150px;
+        }
+        .copyright {
+            font-family : Helvetica;
+            text-align : center;
+            padding : 50px;
+            line-height: 2;
+        }         
+    </style>
+</head>
+    
+<body>
+    <h1> Contact </h1>
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="home"> Home </a>
+        <a href="bio"> Biography </a>
+        <a href="contact"> Contact </a>
+    </div>
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button> 
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "200px";
+          document.getElementById("main").style.marginLeft = "200px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>   
+    
+    <p style="font-size:20px"> <u> <b>To contact : </b></u> </p> 
+    <img src="/static/undraw_contact_us_-15-o2.svg" alt="contact" style="float:left" width=200 height=100>
+    <p style="margin-left:100px;"> 📞 +959-975-025-430  </p>
+    <img src = "/static/undraw_creation_rd-0-e.svg" width="1500" height = "150" style="float:right">
+    <p style="margin-left:100px;"> 📧 <a href="mailto:info@heinhtet.hlaing88@gmail.com?subject=subject&cc=cc@heinhtet.hlaing88@gmail.com">  heinhtet.hlaing88@gmail.com </a> </p>
+    <p style="margin-left:100px;"> <b>f&nbsp;&nbsp; </b> <a href = "https://www.facebook.com/profile.php?id=100009696783007"> Hein Htet Hlaing </a> </p>
+    <br/><br/><br/><br/>
+    <img src = "/static/undraw_web_developer_re_h7ie.svg" alt="a web developer" width="500" height = "250" style="float:center">
+    <div class = "copyright">
+        <p style="position: fixed; bottom: 0; width:80%;"> © 2021 Hein Htet Hlaing Blog <br/> All rights reserved. <br/> Flask back-end website #builtbyme</p>
+    </div>
+</body>
+</html>
