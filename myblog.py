@@ -9,7 +9,13 @@ import os
 import heroku
 from flask import Flask, render_template
 
+with open('config.json', 'r') as c:
+    params = json.load(c)["params"]
+
+local_server = True
 app = Flask(__name__)
+app.secret_key = 'super-secret-key'
+app.config['UPLOAD_FOLDER'] = params['upload_location']
 
 @app.route('/')
 def home1():
