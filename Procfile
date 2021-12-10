@@ -1,1 +1,1 @@
-web: sh setup.sh && heroku run myblog.py
+web: gunicorn app:myblog --log-file=-
